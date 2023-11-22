@@ -1,0 +1,38 @@
+.about {
+  @include center();
+  align-items: center;
+  height: 500px;
+
+  .aboutMe {
+    position: absolute;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    color: $secondary;
+    font-size: 18px;
+    z-index: 1;
+
+    .about-h2 {
+      font-size: $size;
+    }
+  }
+
+  .bgImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .aboutMe {
+    padding: 30px;
+    width: 90% !important;
+  }
+  .about-h2 {
+    font-size: 30px !important;
+  }
+}

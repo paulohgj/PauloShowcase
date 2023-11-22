@@ -1,0 +1,20 @@
+.footer {
+  @include center();
+  padding: 30px;
+
+  .footer-container {
+    @include container();
+    justify-content: center;
+
+    .copy {
+      color: $primary;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .copy {
+    font-size: 14px;
+    text-align: center;
+  }
+}

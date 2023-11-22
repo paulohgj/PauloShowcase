@@ -1,0 +1,98 @@
+.header {
+  @include center();
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
+  padding: $padding;
+
+  .nav-bar {
+    @include container();
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      .h1 {
+        color: $primary;
+        font-weight: $font-600;
+      }
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 30px;
+
+        .nav-link {
+          color: $primary;
+          font-weight: $font-600;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .mobile-menu-icon {
+      display: none;
+
+      button {
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: white;
+
+        span {
+          font-size: $size;
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+
+    &.open {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .mobile-menu-icon {
+    display: block !important;
+  }
+
+  .nav-item {
+    display: none;
+  }
+
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .nav-link {
+      color: $primary;
+      font-weight: $font-600;
+      text-decoration: none;
+    }
+  }
+
+  .mobile-menu .nav-item {
+    display: block;
+    padding-top: 1.2rem;
+  }
+
+  .mobile-menu {
+    display: block;
+    width: 100%;
+  }
+}

@@ -1,0 +1,44 @@
+.projects {
+  @include center();
+  @include line();
+  padding: $padding2;
+
+  .slide-item {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .project-container {
+    @include container();
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+
+    .project-title {
+      font-size: $size;
+      color: $primary;
+    }
+
+    .link-project {
+      color: $primary;
+    }
+  }
+}
+
+.swiper {
+  width: 450px;
+}
+
+@media screen and (max-width: 720px) {
+  .projects {
+    padding: 50px 30px;
+
+    .project-title {
+      font-size: $sizeMobile !important;
+    }
+  }
+
+  .swiper {
+    width: 200px;
+  }
+}

@@ -1,0 +1,34 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin container {
+  display: flex;
+  width: 900px;
+  align-items: center;
+}
+
+@mixin icons {
+  display: flex;
+  justify-content: center;
+  padding: 3px;
+  border: 1px solid $tertiary;
+  border-radius: 7px;
+}
+
+@mixin line {
+  border-bottom: 1px solid $tertiary;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

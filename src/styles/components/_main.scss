@@ -1,0 +1,83 @@
+.main {
+  @include center();
+  padding: 240px $padding;
+
+  .section-title {
+    @include container();
+    justify-content: space-between;
+    font-size: $size;
+
+    .presentation-title {
+      font-weight: $font-100;
+    }
+
+    .name {
+      color: $primary;
+    }
+
+    .profession {
+      text-transform: uppercase;
+      font-size: 27px;
+      font-weight: $font-100;
+    }
+
+    .social {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+
+      .link-icons {
+        @include icons();
+
+        .icons {
+          width: $iconSize;
+        }
+      }
+
+      .link-icons:hover {
+        transition: 0.5s;
+        box-shadow: 1px 1px $tertiary;
+      }
+    }
+
+    .img-container {
+      width: 50%;
+
+      .img {
+        width: 100%;
+        transform: translateY(0px);
+        animation: float 5s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .main {
+    padding: 190px 30px;
+
+    .section-title {
+      flex-direction: column-reverse;
+
+      .title {
+        font-size: 30px;
+        text-align: center;
+
+        .social {
+          justify-content: center;
+          margin-top: 30px;
+        }
+      }
+
+      .img-container {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .img-container {
+    width: 100%;
+  }
+}
